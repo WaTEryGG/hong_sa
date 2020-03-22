@@ -1,0 +1,11 @@
+NQXX-1C
+型号： NQXX-1C  
+用途： 炊事，采暖  
+类别： 家用  
+特点： 热风    
+参考供暖面积㎡： 80-300  
+Model: nqxx-1c
+Purpose: cooking, heating
+Category: household
+Features: hot air
+Reference heating area ㎡: 80-300

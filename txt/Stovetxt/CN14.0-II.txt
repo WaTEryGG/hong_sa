@@ -1,0 +1,19 @@
+CN14.0-II
+型号： CN14.0-II  
+用途： 炊事，采暖，地暖  
+类别： 炊事采暖炉  
+特点： 热风  
+地区： 华北  
+场景： 楼房，平房  
+燃料： 洁净型煤，兰炭  
+额定热功kw： 14  
+参考供暖面积㎡： 120  
+Model: cn14.0-ii
+Purpose: cooking, heating, floor heating
+Category: cooking stove
+Features: hot air
+Region: North China
+Scene: building, bungalow
+Fuel: clean briquette, Lancan
+Rated thermal power kw: 14
+Reference heating area ㎡: 120

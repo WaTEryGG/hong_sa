@@ -1,0 +1,2 @@
+燃料消耗量：70kg/h 热功率：120kw 参考采暖面积：1000㎡
+Fuel consumption: 70kg / h ，thermal power: 120kw ，reference heating area: 1000m2

@@ -1,0 +1,15 @@
+NQXX.X-8C
+型号： NQXX.X-8C  
+用途： 炊事，采暖  
+类别： 家用  
+特点： 热风  
+额定热功kw： 11.6-32.7  
+参考供暖面积㎡： 98-228  
+适用煤种： 烟煤块、生物质压块  
+Model: nqxx.x-8c
+Purpose: cooking, heating
+Category: household
+Features: hot air
+Rated heat work kW: 11.6-32.7
+Reference heating area ㎡: 98-228
+Applicable coal type: bituminous coal block, biomass briquette

@@ -1,0 +1,15 @@
+NQXX.X-1C
+型号： NQXX.X-1C  
+用途： 炊事，采暖  
+类别： 家用  
+特点： 热风  
+额定热功kw： 8-36KW  
+参考供暖面积㎡： 60-300   
+适用煤种： 型煤  
+Model: nqxx.x-1c
+Purpose: cooking, heating
+Category: household
+Features: hot air
+Rated thermal power kw: 8-36kw
+Reference heating area ㎡: 60-300
+Applicable coal type: briquette

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>Layui</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/layui.css" media="all">
+		<!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+	</head>
+
+	<body>
+		<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+		<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+		<div class="layui-container">
+
+			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+				<legend>国家简介</legend>
+			</fieldset>
+
+			<div class="layui-row">
+                <div class="layui-col-xs5">
+					<div class="grid-demo grid-demo-bg1">
+						
+						<img id="pp" src="images/b3094bbfcd2287fb07e807d068c60044.jpg" style="width:100%;height:100% ;border:2px solid"  />
+					</div>
+				</div>
+			
+				<div class="layui-col-xs2">
+					  &nbsp;
+				</div>
+				<div class="layui-col-xs5">
+					<div class="grid-demo">
+						<div style="width:100%;height: 100%;border:2px solid" id="txt">
+							未找到该文档
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" id="a">参考文献</a>
+			<br /> <span >版权所有 © 中国农业大学　ICP证:</span><a href="http://www.beian.miit.gov.cn" >黑ICP备18001842号-1<a/>
+		</div>
+		
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+		<script src="layui.js" charset="utf-8"></script>
+		<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+		<script>
+		</script>
+<script>
+	function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+</script>
+<script>
+	var q = decodeURI(getQueryVariable("pid"));
+	console.log(q); 
+	if(q=="加纳⑨(Ghana)⑨.jpg")
+	{
+		var Ghana = document.getElementById("a");
+		Ghana.href = "https://ieeexplore.ieee.org/document/8601916/";
+		document.getElementById("a").innerText = "加纳参考文献";
+	}
+	else if(q=="乌干达⑦（The Republic of Uganda）⑦.jpg")
+	{
+		document.getElementById("a").href = "https://ieeexplore.ieee.org/document/8601916/";
+		document.getElementById("a").innerText = "乌干达参考文献";
+	}
+	else if(q=="印度⑥（India）⑥.jpg")
+	{
+		document.getElementById("a").href = "https://www.sciencedirect.com/science/article/pii/S2210670719313733";
+		document.getElementById("a").innerText = "印度参考文献";
+	}
+	else if(q=="肯尼亚⑧（The Republic of Kenya）⑧.jpg")
+	{
+		document.getElementById("a").href ="https://www.sciencedirect.com/science/article/abs/pii/S2210670720300263";
+		document.getElementById("a").innerText = "肯尼亚参考文献";
+	}
+	else
+	{
+		document.getElementById("a").innerText = " ";
+	}
+</script>
+<script>
+	var p = getQueryVariable("pid");
+	$("#pp").attr("src", "images/Countryimage/"+p);
+	$("#txt").load("txt/Countrytxt/"+p.replace(".jpg","")+".txt");
+</script>
+
+
+	</body>
+</html>

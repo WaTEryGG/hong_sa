@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>炉灶数据库（Stove database）</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	</head>
+
+	<body>
+		<fieldset class="layui-elem-field layui-field-title " style="margin-top: 50px;">
+			<legend>炉灶数据库（Stove database）</legend>
+		</fieldset>
+
+		<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+
+			<ul class="layui-tab-title layui-bg-cyan">
+				<li class="layui-this">炉灶需求数据表（Data sheet on stove requirements）</li>
+				<li>炉灶数据表（Stove data sheet）</li>
+				<li>国家适配的炉灶（National fit for the stove）</li>
+				<li>炉灶适合的国家（Stoves fit the country）</li>
+				<li>备注（note）</li>
+			</ul>
+
+			<div class="layui-tab-content" style="height: 100px;">
+
+				<div class="layui-tab-item layui-show">
+
+					<table class="layui-hide" id="test"></table>
+					备注（note）：未与中国建交国家标*（Countries that have not established diplomatic relations with China *）
+					<br /> 功率要求依据 ISO 19867-1：2018 （Power requirements according to ISO 19867-1:2018）
+					<br /> 图片来源于网络，版权归原作者所有，本方对此不具有任何责任
+					<br /> 标注①-⑫为重点推荐合作国家，排序为数字顺序
+					<br /> <span >版权所有 © 中国农业大学　ICP证:</span><a href="http://www.beian.miit.gov.cn" >黑ICP备18001842号-1<a/>
+				</div>
+				<!-- 炉灶需求数据表显示-->
+				<div class="layui-tab-item">
+
+					<table class="layui-hide" id="test1"></table>
+					备注（note）：未与中国建交国家标*（Countries that have not established diplomatic relations with China *）
+					<br /> 功率要求依据 ISO 19867-1：2018 （Power requirements according to ISO 19867-1:2018）
+					<br /> 图片来源于网络，版权归原作者所有，本方对此不具有任何责任
+					<br /> 标注①-⑫为重点推荐合作国家，排序为数字顺序
+					<br /> <span >版权所有 © 中国农业大学　ICP证:</span><a href="http://www.beian.miit.gov.cn" >黑ICP备18001842号-1<a/>
+				</div>
+				<!-- 炉灶数据表显示-->
+				<div class="layui-tab-item">
+					<div class="layui-fluid">
+						<div class="layui-card">
+							<div class="layui-form layui-card-header layuiadmin-card-header-auto">
+								<blockquote class="layui-elem-quote">
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<label class="layui-form-label">国家Country</label>
+											<div class="layui-input-block">
+												<select name="city" id="country" lay-verify="required" lay-search>
+													<option value="">搜索（search）</option>
+													<option value="1">中国（China）</option>
+													<option value="2">加纳⑨(Ghana)⑨</option>
+													<option value="3">印度⑥（India）⑥</option>
+													<option value="4">伊朗伊斯兰共和国（Islamic Republic of Iran）</option>
+													<option value="5">埃及（Egypt）</option>
+													<option value="6">印度尼西亚（Indonesia）</option>
+													<option value="7">菲律宾（Republika ng Pilipinas）</option>
+													<option value="8">南非⑤（The Republic of South Africa）⑤</option>
+													<option value="9">巴基斯坦（Islamic Republic of Pakistan）</option>
+													<option value="10">孟加拉国（People's Republic Of Bangladesh）</option>
+													<option value="11">缅甸（Myanmar）</option>
+													<option value="12">越南（Vietnam）</option>
+													<option value="13">泰国（The Kingdom of Thailand）</option>
+													<option value="14">柬埔寨（the Kingdom of Cambodia）</option>
+													<option value="15">蒙古⑪（Mongolia）⑪</option>
+													<option value="16">古巴（Cuba）</option>
+													<option value="17">阿尔及利亚（People's Democratic Republic of Algeria）</option>
+													<option value="18">老挝人民民主共和国③（lao people's democratic republic）③</option>
+													<option value="19">伊拉克（Republic Of Iraq）</option>
+													<option value="20">秘鲁（Peru）</option>
+													<option value="21">几内亚（Guinea）</option>
+													<option value="22">叙利亚（Syria）</option>
+													<option value="23">土耳其（Turkey）</option>
+													<option value="24">约旦（Jordan）</option>
+													<option value="25">黎巴嫩（Lebanon）</option>
+													<option value="26">巴勒斯坦（Palestine）</option>
+													<option value="27">塞浦路斯（Cyprus）</option>
+													<option value="28">巴林（The Kingdom of Bahrain）</option>
+													<option value="29">科威特（Kuwait）</option>
+													<option value="30">卡塔尔（State of Qatar）</option>
+													<option value="31">阿联酋（The United Arab Emirates）</option>
+													<option value="32">沙特阿拉伯（Kingdom of Saudi Arabia）</option>
+													<option value="33">阿曼（Sultanate of Oman）</option>
+													<option value="34">也门（Yemen）</option>
+													<option value="35">马其顿（Macedonia）</option>
+													<option value="36">保加利亚（The Republic of Bulgaria）</option>
+													<option value="37">罗马尼亚（Romania）</option>
+													<option value="38">阿尔巴尼亚（Albania）</option>
+													<option value="39">塞尔维亚（Serbia）</option>
+													<option value="40">拉脱维亚（Latvia）</option>
+													<option value="41">爱沙尼亚（Estonia）</option>
+													<option value="42">立陶宛（Republic of Lithuania）</option>
+													<option value="43">摩尔多瓦（Republic of Moldova）</option>
+													<option value="44">亚美尼亚（ Armenia）</option>
+													<option value="45">阿塞拜疆（The Republic of Azerbaijan）</option>
+													<option value="46">格鲁吉亚（Georgia）</option>
+													<option value="47">吉尔吉斯斯坦（Kyrgyzstan）</option>
+													<option value="48">塔吉克斯坦（Tajikistan）</option>
+													<option value="49">土库曼斯坦（Turkmenistan）</option>
+													<option value="50">乌兹别克斯坦（Uzbekistan）</option>
+													<option value="51">哈萨克斯坦（Kazakhstan）</option>
+													<option value="52">不丹*（Bhutan）*</option>
+													<option value="53">尼泊尔②（Nepal）②</option>
+													<option value="54">马尔代夫（Maldives）</option>
+													<option value="55">斯里兰卡④（Sri Lanka）④</option>
+													<option value="56">阿富汗（Afghanistan）</option>
+													<option value="57">苏丹（Republic of the Sudan）</option>
+													<option value="58">塞内加尔（Senegal）</option>
+													<option value="59">塞拉利昂（The Republic of Sierra Leone）</option>
+													<option value="60">科特迪瓦（Côte d'Ivoire）</option>
+													<option value="61">索马里（Somalia）</option>
+													<option value="62">喀麦隆（Cameroon）</option>
+													<option value="63">塞舌尔（Seychelles）</option>
+													<option value="64">几内亚（Guinea）</option>
+													<option value="65">赞比亚⑩（The Republic of Zambia）⑩</option>
+													<option value="66">莫桑比克（Mozambique）</option>
+													<option value="67">加蓬（Gabon）</option>
+													<option value="68">纳米比亚（The Republic of Namibia）</option>
+													<option value="69">毛里塔尼亚（Mauritania）</option>
+													<option value="70">吉布提（Djibouti）</option>
+													<option value="71">埃塞俄比亚①（The Federal Democratic Republic of Ethiopia）①</option>
+													<option value="72">肯尼亚⑧（The Republic of Kenya）⑧</option>
+													<option value="73">尼日利亚（Federal Republic of Nigeria）</option>
+													<option value="74">乍得（Chad）</option>
+													<option value="75">刚果布（Congo）</option>
+													<option value="76">津巴布韦（zimbabwe）</option>
+													<option value="77">坦桑尼亚（Tanzania）</option>
+													<option value="78">布隆迪（burundi）</option>
+													<option value="79">佛得角（Cape Verde）</option>
+													<option value="80">乌干达⑦（The Republic of Uganda）⑦</option>
+													<option value="81">冈比亚（Republic of The Gambia）</option>
+													<option value="82">多哥（The Republic of Togo）</option>
+													<option value="83">卢旺达（The Republic of Rwanda）</option>
+													<option value="84">摩洛哥（Morocco）</option>
+													<option value="85">马达加斯加（The Republic of Madagascar）</option>
+													<option value="86">突尼斯（Tunisia）</option>
+													<option value="87">利比亚（Libya）</option>
+													<option value="88">赤道几内亚（Equatorial Guinea）</option>
+													<option value="89">利比里亚（Republic of Liberia）</option>
+													<option value="90">马里（Mali）</option>
+													<option value="91">东帝汶（Timor-Leste）</option>
+													<option value="92">马耳他（Malta）</option>
+													<option value="93">巴布亚新几内亚（Independent State of Papua New Guinea）</option>
+													<option value="94">萨摩亚（Samoa）</option>
+													<option value="95">斐济（Fiji）</option>
+													<option value="96">密克罗尼西亚联邦（Federated States of Micronesia）</option>
+													<option value="97">库克群岛（Archipelago）</option>
+													<option value="98">汤加（Tonga）</option>
+													<option value="99">瓦努阿图（Vanuatu）</option>
+													<option value="100">智利（Chile）</option>
+													<option value="101">圭亚那（Cooperative Republic of Guyana）</option>
+													<option value="102">玻利维亚（Plurinational State of Bolivia）</option>
+													<option value="103">乌拉圭（The Oriental Republic of Uruguay）</option>
+													<option value="104">苏里南（The Republic of Suriname）</option>
+													<option value="105">厄瓜多尔（The Republic of Ecuador）</option>
+													<option value="106">哥斯达黎加（The Republic of Costa Rica，La República de Costa Rica）</option>
+													<option value="107">巴拿马（The Republic of Panama）</option>
+													<option value="108">萨尔瓦多（The Republic of El Salvador）</option>
+													<option value="109">多米尼加（The Dominican Republic）</option>
+													<option value="110">特立尼达和多巴哥（Republic of Trinidad and Tobago）</option>
+													<option value="111">安提瓜和巴布达（Antigua and Barbuda）</option>
+													<option value="112">多米尼克（The Commonwealth of Dominica）</option>
+													<option value="113">格林纳达（Grenada）</option>
+													<option value="114">巴巴多斯（Barbados）</option>
+													<option value="115">俄罗斯⑫（Russian Federation）⑫</option>
+
+												</select>
+											</div>
+										</div>
+										<div class="layui-inline">
+											<button class="layui-btn layuiadmin-btn-useradmin" onclick="get1()" lay-submit lay-filter="LAY-user-front-search">
+		      <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+		    </button>
+
+										</div>
+
+									</div>
+								</blockquote>
+
+							</div>
+
+						</div>
+
+					</div>
+					<table class="layui-hide" id="test2"></table>
+					<br />
+					<br />
+					<br /> 备注（note）：未与中国建交国家标*（Countries that have not established diplomatic relations with China *）
+					<br /> 功率要求依据 ISO 19867-1：2018 （Power requirements according to ISO 19867-1:2018）
+					<br /> 图片来源于网络，版权归原作者所有，本方对此不具有任何责任
+					<br /> 标注①-⑫为重点推荐合作国家，排序为数字顺序
+					<br /> <span >版权所有 © 中国农业大学　ICP证:</span><a href="http://www.beian.miit.gov.cn" >黑ICP备18001842号-1<a/>
+				</div>
+
+				<!-- 国家搜索炉具-->
+				<div class="layui-tab-item">
+
+					<div class="layui-fluid">
+						<div class="layui-card">
+							<div class="layui-form layui-card-header layuiadmin-card-header-auto">
+								<blockquote class="layui-elem-quote">
+									<div class="layui-form-item">
+
+										<div class="layui-inline">
+											<label class="layui-form-label">炉灶Stove</label>
+											<div class="layui-input-block">
+												<select name="city" id="stove" lay-verify="required" lay-search>
+													<option value="">搜索（search）</option>
+													<option value="1">FZ-CNS-70型</option>
+													<option value="2">FZ-CNS-1000</option>
+													<option value="3">采暖炉08款（Heating furnace type 08）</option>
+													<option value="4">富氧（Fu Yang）</option>
+													<option value="5">型煤炉（单、双孔）(Type coal stove)</option>
+													<option value="6">CWSN-S8-100</option>
+													<option value="7">NQ-10C</option>
+													<option value="8">CWSN-F</option>
+													<option value="9">LSTG-60A</option>
+													<option value="10">LSTR-A</option>
+													<option value="11">NQXX-1C</option>
+													<option value="12">NQXX.X-8C</option>
+													<option value="13">NQXX.X-1C</option>
+													<option value="14">CNXX.X—II</option>
+													<option value="15">生物质锅炉（biomass boiler）</option>
+													<option value="16">节能煤炉（Energy saving coal stove）</option>
+													<option value="17">燃煤超导气化水暖煤炉（water heating coal stove）</option>
+													<option value="18">商用（commercial）</option>
+													<option value="19">地暖炉（Floor heating stove）</option>
+													<option value="20">节能博士JNS80</option>
+													<option value="21">洁能王JES100H</option>
+													<option value="22">聚丰瓦JFW100H</option>
+													<option value="23">ZB-KA系列（ZB-KA series）</option>
+													<option value="24">ZB-T系列（ZB-T series）</option>
+													<option value="25">暖煦系列（Nuanxu series）</option>
+													<option value="26">暖阳N（Nuanyang N）</option>
+													<option value="27">NQ/18IC</option>
+													<option value="28">NQ/10IC</option>
+													<option value="29">NQ/IC</option>
+													<option value="30">CS/KII</option>
+													<option value="31">生物质自动进料烤火炉（Biomass automatic feed baking furnace）</option>
+													<option value="32">生物质除尘猛火灶（Biomass dedusting stove）</option>
+													<option value="33">9S升级版（9S upgraded version）</option>
+													<option value="34">8S升级版（8S upgraded version）</option>
+													<option value="35">7S升级版（7S upgraded version）</option>
+													<option value="36">6S升级版（6S upgraded version）</option>
+													<option value="37">5S升级版（5S upgraded version）</option>
+													<option value="38">3S升级版（3S upgraded version）</option>
+													<option value="39">智能型做饭锅炉（Intelligent cooking boiler）</option>
+													<option value="40">帅康型（通炕）（Sacon type）</option>
+													<option value="41">灵通型（Well-informed type）</option>
+													<option value="42">神通型(升级版)（Magical type）</option>
+													<option value="43">富康之家智能型做饭锅炉（Home of Fukang intelligent cooking boiler）</option>
+													<option value="44">洁能型（Clean energy）</option>
+													<option value="45">超能型升级版（Super power upgrade）</option>
+													<option value="46">暖亨FS系列（Warm Heng FS series）</option>
+													<option value="47">暖亨FF-35型（Warm Heng FF-35 series）</option>
+													<option value="48">旺佳F2-1型（Wangjia f2-1）</option>
+													<option value="49">旺佳农合F1-2型（Wangjianonghe type f1-2）</option>
+													<option value="50">生物质炊事采暖炉（Biomass cooking heating furnace）</option>
+													<option value="51">圣火系列（Sacred fire series）</option>
+													<option value="52">高炮系列（Antiaircraft gun series）</option>
+													<option value="53">超导环保节能锅炉（Superconducting environmental protection and energy saving boiler）</option>
+													<option value="54">圣旺系列Ⅱ型（Shengwang Series II）</option>
+													<option value="55">CN30.0-II</option>
+													<option value="56">CN14.0-II</option>
+													<option value="57">CN26.0-II</option>
+													<option value="58">CN18.0-II</option>
+													<option value="59">自动燃烧锅炉（Automatic combustion boiler）</option>
+													<option value="60">卧式环保锅炉（Horizontal environmental protection boiler）</option>
+													<option value="61">热能反烧锅炉（Heat reverse fired boiler）</option>
+													<option value="62">节能环保锅炉（Energy saving and environmental protection boiler）</option>
+													<option value="63">省柴节煤灶（Save firewood and coal）</option>
+													<option value="64">YBCN-160型/200型/300型</option>
+													<option value="65">庞龙之星自动燃烧锅炉（Panglong Star automatic combustion boiler）</option>
+													<option value="66">庞龙之星经典自动燃烧锅炉（Panglong Star automatic combustion boiler）</option>
+													<option value="67">新星多火道采暖炉（Xinxing multi channel heating furnace）</option>
+													<option value="68">新二代节能炊事采暖炉（New generation energy-saving cooking heating furnace）</option>
+													<option value="69">生物质多煤种气化炉（Biomass multi coal gasifier）</option>
+													<option value="70">三回程自动燃烧锅炉（Three way automatic combustion boiler）</option>
+													<option value="71">环保气化炉（Environmental protection gasifier）</option>
+													<option value="72">200-1000</option>
+													<option value="73">100-300</option>
+													<option value="74">HBI</option>
+													<option value="75">QH60/160</option>
+													<option value="76">SK200</option>
+													<option value="77">HB160</option>
+													<option value="78">CN100</option>
+													<option value="79">ZY80/360</option>
+													<option value="80">S32-23</option>
+													<option value="81">S26-13</option>
+													<option value="82">M45-228多功能柴炉（M45-228 multi-functional wood stove）</option>
+													<option value="83">M35多功能柴炉（M35 multi-functional wood stove）</option>
+													<option value="84">三芯精品炉（Three core boutique furnace）</option>
+													<option value="85">四芯炉（Four core furnace）</option>
+													<option value="86">C26-11</option>
+													<option value="87">C28-11</option>
+													
+												</select>
+											</div>
+										</div>
+
+										<div class="layui-inline">
+											<button class="layui-btn layuiadmin-btn-useradmin" onclick="get2()" lay-submit lay-filter="LAY-user-front-search">
+              <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+            </button>
+
+										</div>
+									</div>
+								</blockquote>
+							</div>
+
+						</div>
+
+					</div>
+					<table class="layui-hide" id="test3"></table>
+					<br />
+					<br />
+					<br /> 备注（note）：未与中国建交国家标*（Countries that have not established diplomatic relations with China *）
+					<br /> 功率要求依据 ISO 19867-1：2018 （Power requirements according to ISO 19867-1:2018）
+					<br /> 图片来源于网络，版权归原作者所有，本方对此不具有任何责任
+					<br /> 标注①-⑫为重点推荐合作国家，排序为数字顺序
+					<br /> <span >版权所有 © 中国农业大学　ICP证:</span><a href="http://www.beian.miit.gov.cn" >黑ICP备18001842号-1<a/>
+				</div>
+
+				<!-- 炉具搜索国家-->
+				<div class="layui-tab-item">
+					<a href="https://www.sciencedirect.com/science/article/abs/pii/S2210670720300263" target="_blank">肯尼亚炊事习惯</a>
+					<br /> <a href="https://www.sciencedirect.com/science/article/pii/S2210670719313733" target="_blank">印度炊事习惯</a>
+					<br /> <a href="https://ieeexplore.ieee.org/document/8601916/" target="_blank">乌干达炊事习惯</a>
+					<br /> <a href="https://ieeexplore.ieee.org/document/8601916/" target="_blank">加纳炊事习惯</a>
+					<br /> 备注（note）：未与中国建交国家标*（Countries that have not established diplomatic relations with China *）
+					<br /> 功率要求依据 ISO 19867-1：2018 （Power requirements according to ISO 19867-1:2018）
+					<br /> 图片来源于网络，版权归原作者所有，本方对此不具有任何责任
+					<br /> 标注①-⑫为重点推荐合作国家，排序为数字顺序
+					<br /> <span >版权所有 © 中国农业大学　ICP证:</span><a href="http://www.beian.miit.gov.cn" >黑ICP备18001842号-1<a/>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="layui.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="css/layui.css" media="all">
+	<script>
+		$.post('http://39.107.98.223:8086/country/data', {}, function(result) {//http://39.107.98.223:8082/country/data/
+			layui.use('table', function() {
+				var table = layui.table;
+
+				table.render({
+					elem: '#test',
+					data: result,
+					cellMinWidth: 200 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+						,
+					page: true,
+					limit: 20,
+					cols: [
+						[{
+								field: 'id',
+								width: 70,
+								title: 'ID',
+								sort: true
+							}, {
+								field: 'country',
+
+								title: '国家（Country）',
+
+								templet: '<div><a  href="3.html?pid={{d.country}}.jpg" target="_blank" class="layui-table-link">{{d.country}}</a></div>'
+
+							}, {
+								field: 'countryArea',
+
+								title: '国家面积（Country area）',
+								sort: true
+							}, {
+								field: 'nationalPopulation',
+
+								title: '国家人口（National Population）'
+							} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+							, {
+								field: 'habitationHabit',
+								title: '居住习惯（Habitation habit）',
+								sort: true
+							}, {
+								field: 'stoveFunction',
+								title: '炉灶功能（Stove function）',
+								sort: true
+							}, {
+								field: 'cookingHabits',
+								title: '炊事习惯（Cooking habits）'
+							}, {
+								field: 'powerRequirement',
+
+								title: '功率要求（Power requirement）',
+								sort: true
+							}, {
+								field: 'rawMaterialShap',
+								title: '燃料形状（Raw material shape）'
+							}, {
+								field: 'stoveMaterial',
+								title: '燃料种类（Fuel types）'
+							}, {
+								field: 'highPowerTime',
+								title: '备注'
+							} 
+						]
+					]
+				});
+			});
+		})
+		$.post('http://39.107.98.223:8086/stove/data', {}, function(result) {//http://39.107.98.223:8082/stove/data/
+			layui.use('table', function() {
+				var table = layui.table;
+
+				table.render({
+					elem: '#test1',
+					data: result,
+					cellMinWidth: 200 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+						,
+					page: true,
+					limit: 20,
+					cols: [
+						[{
+								field: 'id',
+								width: 70,
+								title: 'ID',
+								sort: true
+							}, {
+								field: 'cookerManufacturer',
+
+								title: '炉灶厂商（Cooker manufacturer）'
+							}, {
+								field: 'stoveModel',
+
+								title: '炉灶型号（Stove type）',
+								sort: true,
+								templet: '<div><a  href="2.html?pid={{d.stoveModel}}.png" target="_blank" class="layui-table-link">{{d.stoveModel}}</a></div>'
+							}, {
+								field: 'stoveType',
+
+								title: '炉灶类型（Stove type）'
+							} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+							, {
+								field: 'stoveFunction',
+								title: '炉灶功能（Stove function）',
+								sort: true
+							}, {
+								field: 'stoveMaterial',
+								title: '燃料种类（Fuel types）',
+								sort: true
+							}, {
+								field: 'fuelShape',
+								title: '燃料形状（Fuel shape）'
+							}, {
+								field: 'stovePower',
+
+								title: '炉灶功率（Stove power）',
+								sort: true
+							}, {
+								field: 'telephone',
+								title: '联系方式（contact）'
+							}
+						]
+					]
+				});
+			});
+		})
+	</script>
+	<script>
+		function get1() {
+
+			var options = $("#country option:selected");　　　　 //获取选中项
+
+			var country = options.val();　　　　　　　　　　　　　　 //获取选中项的值
+
+			//alert(country);　　　　　　　　　　　　　　　　　　　　　　 //检验是否获取到值
+
+			$.post('http://39.107.98.223:8086/stove/match', {//http://39.107.98.223:8082/stove/match
+				id: country
+			}, function(result) {
+
+				var data = [];
+				for(var i = 0; i < result.length; i++) {
+					var temp = result[i].stoveDataSheet;
+					temp["matchNumber"] = result[i].matchNumber;
+					data.push(temp);
+
+				}
+
+				layui.use('table', function() {
+					var table = layui.table;
+
+					table.render({
+						elem: '#test2',
+						data: data,
+						cellMinWidth: 200 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+							,
+						page: true,
+						limit: 20,
+						cols: [
+							[{
+									field: 'id',
+									width: 70,
+									title: 'ID',
+									sort: true
+								}, {
+									field: 'cookerManufacturer',
+
+									title: '炉灶厂商（Cooker manufacturer）'
+								}, {
+									field: 'stoveModel',
+
+									title: '炉灶型号（Stove type）',
+									sort: true,
+									templet: '<div><a  href="2.html?pid={{d.stoveModel}}.png" target="_blank" class="layui-table-link">{{d.stoveModel}}</a></div>'
+
+								}, {
+									field: 'stoveType',
+
+									title: '炉灶类型（Stove type）'
+								} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+								, {
+									field: 'stoveFunction',
+									title: '炉灶功能（Stove function）',
+									sort: true
+								}, {
+									field: 'stoveMaterial',
+									title: '燃料种类（Fuel types）',
+									sort: true
+								}, {
+									field: 'fuelShape',
+									title: '燃料形状（Fuel shape）'
+								}, {
+									field: 'stovePower',
+
+									title: '炉灶功率（Stove power）',
+									sort: true
+								}, {
+									field: 'telephone',
+									title: '联系方式（contact）'
+								}, {
+									field: 'matchNumber',
+									title: '匹配度（compatibility）'
+								}
+
+							]
+						]
+					});
+				});
+			})
+
+		}
+
+		function get2() {
+
+			var options = $("#stove option:selected");　　　　 //获取选中项
+
+			var stove = options.val();　　　　　　　　　　　　　　 //获取选中项的值
+
+			//alert(stove);　　　　　　　　　　　　　　　　　　　　　　 //检验是否获取到值
+			//console.log("1");
+
+			$.post('http://39.107.98.223:8086/country/match', {//http://39.107.98.223:8082/country/match
+				id: stove
+			}, function(result) {
+
+				var data = [];
+				for(var i = 0; i < result.length; i++) {
+					var temp = result[i].stoveDemandDataSheet;
+					temp["matchNumber"] = result[i].matchNumber;
+					data.push(temp);
+
+				}
+
+				layui.use('table', function() {
+					var table = layui.table;
+
+					table.render({
+						elem: '#test3',
+						data: data,
+						cellMinWidth: 200 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+							,
+						page: true,
+						limit: 20,
+						cols: [
+							[{
+									field: 'id',
+									width: 70,
+									title: 'ID',
+									sort: true
+								}, {
+									field: 'country',
+
+									title: '国家（Country）',
+									templet: '<div><a  href="3.html?pid={{d.country}}.png" target="_blank" class="layui-table-link">{{d.country}}</a></div>'
+									
+								}, {
+									field: 'countryArea',
+
+									title: '国家面积（Country area）',
+									sort: true
+								}, {
+									field: 'nationalPopulation',
+
+									title: '国家人口（National Population）'
+								} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+								, {
+									field: 'habitationHabit',
+									title: '居住习惯（Habitation habit）',
+									sort: true
+								}, {
+									field: 'stoveFunction',
+									title: '炉灶功能（Stove function）',
+									sort: true
+								}, {
+									field: 'cookingHabits',
+									title: '炊事习惯（Cooking habits）'
+								}, {
+									field: 'powerRequirement',
+
+									title: '功率要求（Power requirement）',
+									sort: true
+								}, {
+									field: 'stoveMaterial',
+									title: '燃料种类（Fuel types）'
+								}, {
+									field: 'rawMaterialShap',
+									title: '燃料形状（Raw material shape）'
+								}, {
+									field: 'matchNumber',
+									title: '匹配度（compatibility）'
+								}, {
+									field: 'highPowerTime',
+									title: '备注'
+								}
+
+							]
+						]
+					});
+				});
+			})
+
+		}
+	</script>
+	<script>
+		layui.use(['form', 'layedit', 'laydate'], function() {
+			var form = layui.form,
+				layer = layui.layer,
+				layedit = layui.layedit,
+				laydate = layui.laydate;
+
+			//日期
+			laydate.render({
+				elem: '#date'
+			});
+			laydate.render({
+				elem: '#date1'
+			});
+
+			//创建一个编辑器
+			var editIndex = layedit.build('LAY_demo_editor');
+
+			//自定义验证规则
+			form.verify({
+				title: function(value) {
+					if(value.length < 5) {
+						return '标题至少得5个字符啊';
+					}
+				},
+				pass: [
+					/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'
+				],
+				content: function(value) {
+					layedit.sync(editIndex);
+				}
+			});
+
+			//监听指定开关
+			form.on('switch(switchTest)', function(data) {
+				layer.msg('开关checked：' + (this.checked ? 'true' : 'false'), {
+					offset: '6px'
+				});
+				layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+			});
+
+			//监听提交
+			form.on('submit(demo1)', function(data) {
+				layer.alert(JSON.stringify(data.field), {
+					title: '最终的提交信息'
+				})
+				return false;
+			});
+
+			//表单赋值
+			layui.$('#LAY-component-form-setval').on('click', function() {
+				form.val('example', {
+					"username": "贤心" // "name": "value"
+						,
+					"password": "123456",
+					"interest": 1,
+					"like[write]": true //复选框选中状态
+						,
+					"close": true //开关状态
+						,
+					"sex": "女",
+					"desc": "我爱 layui"
+				});
+			});
+
+			//表单取值
+			layui.$('#LAY-component-form-getval').on('click', function() {
+				var data = form.val('example');
+				alert(JSON.stringify(data));
+			});
+
+		});
+	</script>
+	<script>
+		layui.use(['form', 'layedit', 'laydate'], function() {
+			var form = layui.form,
+				layer = layui.layer,
+				layedit = layui.layedit,
+				laydate = layui.laydate;
+
+			//日期
+			laydate.render({
+				elem: '#date'
+			});
+			laydate.render({
+				elem: '#date1'
+			});
+
+			//创建一个编辑器
+			var editIndex = layedit.build('LAY_demo_editor');
+
+			//自定义验证规则
+			form.verify({
+				title: function(value) {
+					if(value.length < 5) {
+						return '标题至少得5个字符啊';
+					}
+				},
+				pass: [
+					/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'
+				],
+				content: function(value) {
+					layedit.sync(editIndex);
+				}
+			});
+
+			//监听指定开关
+			form.on('switch(switchTest)', function(data) {
+				layer.msg('开关checked：' + (this.checked ? 'true' : 'false'), {
+					offset: '6px'
+				});
+				layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+			});
+
+			//监听提交
+			form.on('submit(demo1)', function(data) {
+				layer.alert(JSON.stringify(data.field), {
+					title: '最终的提交信息'
+				})
+				return false;
+			});
+
+			//表单赋值
+			layui.$('#LAY-component-form-setval').on('click', function() {
+				form.val('example', {
+					"username": "贤心" // "name": "value"
+						,
+					"password": "123456",
+					"interest": 1,
+					"like[write]": true //复选框选中状态
+						,
+					"close": true //开关状态
+						,
+					"sex": "女",
+					"desc": "我爱 layui"
+				});
+			});
+
+			//表单取值
+			layui.$('#LAY-component-form-getval').on('click', function() {
+				var data = form.val('example');
+				alert(JSON.stringify(data));
+			});
+
+		});
+	</script>
+	<script>
+		layui.use('element', function() {
+			var $ = layui.jquery,
+				element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+			//触发事件
+			var active = {
+				tabAdd: function() {
+					//新增一个Tab项
+					element.tabAdd('demo', {
+						title: '新选项' + (Math.random() * 1000 | 0) //用于演示
+							,
+						content: '内容' + (Math.random() * 1000 | 0),
+						id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+					})
+				},
+				tabDelete: function(othis) {
+					//删除指定Tab项
+					element.tabDelete('demo', '44'); //删除：“商品管理”
+
+					othis.addClass('layui-btn-disabled');
+				},
+				tabChange: function() {
+					//切换到指定Tab项
+					element.tabChange('demo', '22'); //切换到：用户管理
+				}
+			};
+
+			$('.site-demo-active').on('click', function() {
+				var othis = $(this),
+					type = othis.data('type');
+				active[type] ? active[type].call(this, othis) : '';
+			});
+
+			//Hash地址的定位
+			var layid = location.hash.replace(/^#test=/, '');
+			element.tabChange('test', layid);
+
+			element.on('tab(test)', function(elem) {
+				location.hash = 'test=' + $(this).attr('lay-id');
+			});
+
+		});
+	</script>
+
+</html>

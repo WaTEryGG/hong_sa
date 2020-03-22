@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Layui</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="css/layui.css" media="all">
+		<!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+	</head>
+
+	<body>
+		<blockquote class="layui-elem-quote layui-text">
+			<div class="layui-fluid">
+				<div class="layui-card">
+					<div class="layui-form layui-card-header layuiadmin-card-header-auto">
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">国家</label>
+								<div class="layui-input-block">
+									<select name="city" lay-verify="required" lay-search>
+										<option value="">搜索</option>
+										<option value="1">中国（China）</option>
+										<option value="2">加纳(Ghana)</option>
+										<option value="3">印度（India）</option>
+										<option value="4">伊朗伊斯兰共和国（Islamic Republic of Iran）</option>
+										<option value="5">埃及（Egypt）</option>
+										<option value="6">印度尼西亚（Indonesia）</option>
+										<option value="7">菲律宾（Republika ng Pilipinas）</option>
+										<option value="8">南非（The Republic of South Africa）</option>
+										<option value="9">巴基斯坦（Islamic Republic of Pakistan）</option>
+										<option value="10">孟加拉国（People's Republic Of Bangladesh）</option>
+										<option value="11">缅甸（Myanmar）</option>
+										<option value="12">越南（Vietnam）</option>
+										<option value="13">泰国（The Kingdom of Thailand）</option>
+										<option value="14">柬埔寨（the Kingdom of Cambodia）</option>
+										<option value="15">蒙古（Mongolia）</option>
+										<option value="16">古巴（Cuba）</option>
+										<option value="17">阿尔及利亚（People's Democratic Republic of Algeria）</option>
+										<option value="18">老挝人民民主共和国（lao people's democratic republic）</option>
+										<option value="19">伊拉克（Republic Of Iraq）</option>
+										<option value="20">秘鲁（Peru）</option>
+										<option value="21">几内亚（Guinea）</option>
+										<option value="22">叙利亚（Syria）</option>
+										<option value="23">土耳其（Turkey）</option>
+										<option value="24">约旦（Jordan）</option>
+										<option value="25">黎巴嫩（Lebanon）</option>
+										<option value="26">巴勒斯坦（Palestine）</option>
+										<option value="27">塞浦路斯（Cyprus）</option>
+										<option value="28">巴林（The Kingdom of Bahrain）</option>
+										<option value="29">科威特（Kuwait）</option>
+										<option value="30">卡塔尔（State of Qatar）</option>
+										<option value="31">阿联酋（The United Arab Emirates）</option>
+										<option value="32">沙特阿拉伯（Kingdom of Saudi Arabia）</option>
+										<option value="33">阿曼（Sultanate of Oman）</option>
+										<option value="34">也门（Yemen）</option>
+										<option value="35">马其顿（Macedonia）</option>
+										<option value="36">保加利亚（The Republic of Bulgaria）</option>
+										<option value="37">罗马尼亚（Romania）</option>
+										<option value="38">阿尔巴尼亚（Albania）</option>
+										<option value="39">塞尔维亚（Serbia）</option>
+										<option value="40">拉脱维亚（Latvia）</option>
+										<option value="41">爱沙尼亚（Estonia）</option>
+										<option value="42">立陶宛（Republic of Lithuania）</option>
+										<option value="43">摩尔多瓦（Republic of Moldova）</option>
+										<option value="44">亚美尼亚（ Armenia）</option>
+										<option value="45">阿塞拜疆（The Republic of Azerbaijan）</option>
+										<option value="46">格鲁吉亚（Georgia）</option>
+										<option value="47">吉尔吉斯斯坦（Kyrgyzstan）</option>
+										<option value="48">塔吉克斯坦（Tajikistan）</option>
+										<option value="49">土库曼斯坦（Turkmenistan）</option>
+										<option value="50">乌兹别克斯坦（Uzbekistan）</option>
+										<option value="51">哈萨克斯坦（Kazakhstan）</option>
+										<option value="52">不丹（Bhutan）</option>
+										<option value="53">尼泊尔（Nepal）</option>
+										<option value="54">马尔代夫（Maldives）</option>
+										<option value="55">斯里兰卡（Sri Lanka）</option>
+										<option value="56">阿富汗（Afghanistan）</option>
+										<option value="57">苏丹（Republic of the Sudan）</option>
+										<option value="58">塞内加尔（Senegal）</option>
+										<option value="59">塞拉利昂（The Republic of Sierra Leone）</option>
+										<option value="60">科特迪瓦（Côte d'Ivoire）</option>
+										<option value="61">索马里（Somalia）</option>
+										<option value="62">喀麦隆（Cameroon）</option>
+										<option value="63">塞舌尔（Seychelles）</option>
+										<option value="64">几内亚（Guinea）</option>
+										<option value="65">赞比亚（The Republic of Zambia）</option>
+										<option value="66">莫桑比克（Mozambique）</option>
+										<option value="67">加蓬（Gabon）</option>
+										<option value="68">纳米比亚（The Republic of Namibia）</option>
+										<option value="69">毛里塔尼亚（Mauritania）</option>
+										<option value="70">吉布提（Djibouti）</option>
+										<option value="71">埃塞俄比亚（The Federal Democratic Republic of Ethiopia）</option>
+										<option value="72">肯尼亚（The Republic of Kenya）</option>
+										<option value="73">尼日利亚（Federal Republic of Nigeria）</option>
+										<option value="74">乍得（Chad）</option>
+										<option value="75">刚果布（Congo）</option>
+										<option value="76">津巴布韦（zimbabwe）</option>
+										<option value="77">坦桑尼亚（Tanzania）</option>
+										<option value="78">布隆迪（burundi）</option>
+										<option value="79">佛得角（Cape Verde）</option>
+										<option value="80">乌干达（The Republic of Uganda）</option>
+										<option value="81">冈比亚（Republic of The Gambia）</option>
+										<option value="82">多哥（The Republic of Togo）</option>
+										<option value="83">卢旺达（The Republic of Rwanda）</option>
+										<option value="84">摩洛哥（Morocco）</option>
+										<option value="85">马达加斯加（The Republic of Madagascar）</option>
+										<option value="86">突尼斯（Tunisia）</option>
+										<option value="87">利比亚（Libya）</option>
+										<option value="88">赤道几内亚（Equatorial Guinea）</option>
+										<option value="89">利比里亚（Republic of Liberia）</option>
+										<option value="90">马里（Mali）</option>
+										<option value="91">东帝汶（Timor-Leste）</option>
+										<option value="92">马耳他（Malta）</option>
+										<option value="93">巴布亚新几内亚（Independent State of Papua New Guinea）</option>
+										<option value="94">萨摩亚（Samoa）</option>
+										<option value="95">斐济（Fiji）</option>
+										<option value="96">密克罗尼西亚联邦（Federated States of Micronesia）</option>
+										<option value="97">库克群岛（Archipelago）</option>
+										<option value="98">汤加（Tonga）</option>
+										<option value="99">瓦努阿图（Vanuatu）</option>
+										<option value="100">智利（Chile）</option>
+										<option value="101">圭亚那（Cooperative Republic of Guyana）</option>
+										<option value="102">玻利维亚（Plurinational State of Bolivia）</option>
+										<option value="103">乌拉圭（The Oriental Republic of Uruguay）</option>
+										<option value="104">苏里南（The Republic of Suriname）</option>
+										<option value="105">厄瓜多尔（The Republic of Ecuador）</option>
+										<option value="106">哥斯达黎加（The Republic of Costa Rica，La República de Costa Rica）</option>
+										<option value="107">巴拿马（The Republic of Panama）</option>
+										<option value="108">萨尔瓦多（The Republic of El Salvador）</option>
+										<option value="109">多米尼加（The Dominican Republic）</option>
+										<option value="110">特立尼达和多巴哥（Republic of Trinidad and Tobago）</option>
+										<option value="111">安提瓜和巴布达（Antigua and Barbuda）</option>
+										<option value="112">多米尼克（The Commonwealth of Dominica）</option>
+										<option value="113">格林纳达（Grenada）</option>
+										<option value="114">巴巴多斯（Barbados）</option>
+
+									</select>
+								</div>
+							</div>
+							<div class="layui-inline">
+								<button class="layui-btn layuiadmin-btn-useradmin" lay-submit lay-filter="LAY-user-front-search">
+		      <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+		    </button>
+								<button class="layui-btn " onclick="get1()">炉具需求数据表</button>
+								<script>
+									function get1() {
+										console.log("11");
+									}
+								</script>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">炉灶</label>
+								<div class="layui-input-block">
+									<select name="city" lay-verify="required" lay-search>
+										<option value="">搜索</option>
+										<option value="1">FZ-CNS-70型</option>
+										<option value="2">FZ-CNS-1000</option>
+										<option value="3">FZ-CNS-200</option>
+										<option value="4">FZ-CNS-150</option>
+										<option value="5">FZ-CNS-120</option>
+										<option value="6">NQ-5CS</option>
+										<option value="7">CLHS0.047-CLHS2.1</option>
+										<option value="8">富氧</option>
+										<option value="9">型煤炉（单、双孔）</option>
+										<option value="10">CWSN-S8-100</option>
+										<option value="11">NQ-10C</option>
+										<option value="12">CWKH9.3-IV</option>
+										<option value="13">CWSN-F</option>
+										<option value="14">LSTG-60A</option>
+										<option value="15">LSTR-A</option>
+										<option value="16">LSTG-60A</option>
+										<option value="17">CNS-XX.X</option>
+										<option value="18">NQXX-1C</option>
+										<option value="19">NQXX.X-8C</option>
+										<option value="20">NQXX.X-1C</option>
+										<option value="21">CNXX.X—II</option>
+										<option value="22">生物质锅炉</option>
+										<option value="23">节能煤炉</option>
+										<option value="24">民用水暖煤炉</option>
+										<option value="25">燃煤超导气化水暖煤炉</option>
+										<option value="26">CLNS、CWNS系列</option>
+										<option value="27">地暖专用锅炉</option>
+										<option value="28">地暖专用采暖炉</option>
+										<option value="29">民用水暖煤炉</option>
+										<option value="30">家用蜂窝煤炉</option>
+										<option value="31">蜂窝煤采暖炉</option>
+										<option value="32">民用采暖炉</option>
+										<option value="33">B型新款民用水暖煤炉</option>
+										<option value="34">民用水暖煤炉（煤泥）</option>
+										<option value="35">商用</option>
+										<option value="36">地暖炉</option>
+										<option value="37">节能博士JNS80</option>
+										<option value="38">洁能王JES100H</option>
+										<option value="39">洁能王JES100</option>
+										<option value="40">聚丰瓦JFW100H</option>
+										<option value="41">2013款暖悦系列</option>
+										<option value="42">2014款暖悦系列</option>
+										<option value="43">ZB-KA系列</option>
+										<option value="44">ZB-T系列</option>
+										<option value="45">暖煦系列</option>
+										<option value="46">FA</option>
+										<option value="47">FB</option>
+										<option value="48">暖阳N</option>
+										<option value="49">鸿运系列</option>
+										<option value="50">铸铁水套炊暖炉</option>
+										<option value="51">地暖锅炉</option>
+										<option value="52">“奇火”系列</option>
+										<option value="53">DN-160WY</option>
+										<option value="54">“冬暖DN（B）-WY”系列</option>
+										<option value="55">三燃料锅炉DBZ</option>
+										<option value="56">DDL-系列</option>
+										<option value="57">铸铁水套系列</option>
+										<option value="58">生物质压块燃料炊事炉</option>
+										<option value="59">DB-230WY</option>
+										<option value="60">DH-150WY</option>
+										<option value="61">生物质炊暖炉</option>
+										<option value="62">NQ/18IC</option>
+										<option value="63">NQ/10IC</option>
+										<option value="64">CNS10IV—CNS18IV</option>
+										<option value="65">NQ/IC</option>
+										<option value="66">CS/KII</option>
+										<option value="67">生物质自动进料烤火炉</option>
+										<option value="68">生物质大/中锅灶</option>
+										<option value="69">生物质除尘猛火灶</option>
+										<option value="70">XNNY-LJ-B2</option>
+										<option value="71">XNNY-LJ-B3</option>
+										<option value="72">XNNY-LJ-A</option>
+										<option value="73">高效低排放生物质炉</option>
+										<option value="74">YN-500S</option>
+										<option value="75">YN-100S</option>
+										<option value="76">YN-60S</option>
+										<option value="77">9S升级版</option>
+										<option value="78">8S升级版</option>
+										<option value="79">7S升级版</option>
+										<option value="80">6S升级版</option>
+										<option value="81">5S升级版</option>
+										<option value="82">3S升级版</option>
+										<option value="83">智能型做饭锅炉</option>
+										<option value="84">帅康型（通炕）</option>
+										<option value="85">灵通型</option>
+										<option value="86">神通型(升级版)</option>
+										<option value="87">富康之家 智能型做饭锅炉</option>
+										<option value="88">洁能型</option>
+										<option value="89">超能型升级版</option>
+										<option value="90">暖亨FS系列</option>
+										<option value="91">暖亨FF-35型</option>
+										<option value="92">旺佳F2-1型</option>
+										<option value="93">旺佳农合F1-2型</option>
+										<option value="94">生物质炊事采暖炉</option>
+										<option value="95">蓝澳之星数控锅炉</option>
+										<option value="96">圣火系列</option>
+										<option value="97">高炮系列</option>
+										<option value="98">超导环保节能锅炉</option>
+										<option value="99">圣旺系列Ⅱ型</option>
+										<option value="100">圣旺系列Ⅰ型</option>
+										<option value="101">手烧锅炉</option>
+										<option value="102">CN30.0-II</option>
+										<option value="103">CN14.0-II</option>
+										<option value="104">CN26.0-II</option>
+										<option value="105">CN18.0-II</option>
+										<option value="106">CN12.0-II</option>
+										<option value="107">CN23.0-II</option>
+										<option value="108">自动燃烧锅炉</option>
+										<option value="109">卧式环保锅炉</option>
+										<option value="110">热能反烧锅炉</option>
+										<option value="111">节能环保锅炉</option>
+										<option value="112">自动燃烧锅炉</option>
+										<option value="113">节能环保锅炉</option>
+										<option value="114">省柴节煤灶</option>
+										<option value="115">暖炊炉</option>
+										<option value="116">蒙炉</option>
+										<option value="117">YBCN-160型/200型/300型</option>
+										<option value="118">YBCN-160型/200型/300型</option>
+										<option value="119">YBCN-160型/200型/301型</option>
+										<option value="120">数控锅炉</option>
+										<option value="121">数控锅炉</option>
+										<option value="122">庞龙之星自动燃烧锅炉</option>
+										<option value="123">庞龙之星自动燃烧锅炉</option>
+										<option value="124">新星多火道采暖炉</option>
+										<option value="125">新二代节能炊事采暖炉</option>
+										<option value="126">生物质多煤种气化炉</option>
+										<option value="127">三回程自动燃烧锅炉</option>
+										<option value="128">炊事采暖炉</option>
+										<option value="129">环保气化炉</option>
+										<option value="130">多回程环保气化炉</option>
+										<option value="131">200-1000</option>
+										<option value="132">采暖炉</option>
+										<option value="133">100-300</option>
+										<option value="134">HBI</option>
+										<option value="135">QH60/160</option>
+										<option value="136">SK200</option>
+										<option value="137">HB160</option>
+										<option value="138">HB160</option>
+										<option value="139">CN100</option>
+										<option value="140">ZY80/360</option>
+										<option value="141">S32-23</option>
+										<option value="142">S26-13</option>
+										<option value="143">M45-228多功能柴炉</option>
+										<option value="144">M35多功能柴炉</option>
+										<option value="145">三芯精品炉</option>
+										<option value="146">四芯炉</option>
+										<option value="147">C26-11</option>
+										<option value="148">C28-11</option>
+										<option value="149">风扇版碳炉</option>
+										<option value="150">生物质炊事采暖炉CNS12-II</option>
+										<option value="151">生物质炊事炉C2</option>
+										<option value="152">炊事烤火炉CK-S-2.0-III</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="layui-inline">
+								<button class="layui-btn layuiadmin-btn-useradmin" lay-submit lay-filter="LAY-user-front-search">
+              <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+            </button>
+								<button class="layui-btn " onclick="get2()">炉具数据表</button>
+								<script>
+									function get2() {
+
+									}
+								</script>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</blockquote>
+
+		<script src="layui.js" charset="utf-8"></script>
+		<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+		<script>
+			layui.use(['form', 'layedit', 'laydate'], function() {
+				var form = layui.form,
+					layer = layui.layer,
+					layedit = layui.layedit,
+					laydate = layui.laydate;
+
+				//日期
+				laydate.render({
+					elem: '#date'
+				});
+				laydate.render({
+					elem: '#date1'
+				});
+
+				//创建一个编辑器
+				var editIndex = layedit.build('LAY_demo_editor');
+
+				//自定义验证规则
+				form.verify({
+					title: function(value) {
+						if(value.length < 5) {
+							return '标题至少得5个字符啊';
+						}
+					},
+					pass: [
+						/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'
+					],
+					content: function(value) {
+						layedit.sync(editIndex);
+					}
+				});
+
+				//监听指定开关
+				form.on('switch(switchTest)', function(data) {
+					layer.msg('开关checked：' + (this.checked ? 'true' : 'false'), {
+						offset: '6px'
+					});
+					layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+				});
+
+				//监听提交
+				form.on('submit(demo1)', function(data) {
+					layer.alert(JSON.stringify(data.field), {
+						title: '最终的提交信息'
+					})
+					return false;
+				});
+
+				//表单赋值
+				layui.$('#LAY-component-form-setval').on('click', function() {
+					form.val('example', {
+						"username": "贤心" // "name": "value"
+							,
+						"password": "123456",
+						"interest": 1,
+						"like[write]": true //复选框选中状态
+							,
+						"close": true //开关状态
+							,
+						"sex": "女",
+						"desc": "我爱 layui"
+					});
+				});
+
+				//表单取值
+				layui.$('#LAY-component-form-getval').on('click', function() {
+					var data = form.val('example');
+					alert(JSON.stringify(data));
+				});
+
+			});
+		</script>
+
+	</body>
+
+</html>
